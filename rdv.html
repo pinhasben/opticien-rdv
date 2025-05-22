@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prendre rendez-vous - Optipin Paris</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 4px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #008080;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #006666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Prendre un rendez-vous</h2>
+    <form action="https://formsubmit.co/contact@optipinparis.com" method="POST">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="Prénom" required>
+
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="Nom" required>
+
+      <label for="email">Adresse email</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="adresse">Adresse du rendez-vous</label>
+      <textarea id="adresse" name="Adresse" rows="2" required></textarea>
+
+      <label for="date">Date souhaitée</label>
+      <input type="date" id="date" name="Date" required>
+
+      <label for="heure">Créneau horaire</label>
+      <select id="heure" name="Créneau" required>
+        <option value="">-- Sélectionnez un créneau --</option>
+        <option>Lundi à Jeudi : 9h00 - 9h45</option>
+        <option>Lundi à Jeudi : 10h00 - 10h45</option>
+        <option>Lundi à Jeudi : 11h00 - 11h45</option>
+        <option>Lundi à Jeudi : 14h00 - 14h45</option>
+        <option>Lundi à Jeudi : 15h00 - 15h45</option>
+        <option>Vendredi : 9h00 - 9h45</option>
+        <option>Vendredi : 10h00 - 10h45</option>
+        <option>Vendredi : 11h00 - 11h45</option>
+      </select>
+
+      <label for="financement">Type de financement</label>
+      <select id="financement" name="Financement" required>
+        <option value="">-- Choisissez --</option>
+        <option value="Mutuelle">Mutuelle</option>
+        <option value="CMU">CMU</option>
+        <option value="Personnel">Financement personnel</option>
+      </select>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://optipinparis.com/merci.html">
+      <button type="submit">Envoyer la demande</button>
+    </form>
+  </div>
+</body>
+</html>
